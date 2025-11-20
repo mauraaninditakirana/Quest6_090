@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.quest6.ui.theme.Quest6Theme
+import com.example.quest6.view.uicontroller.DataApp
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Quest6Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-
+                    DataApp(modifier = Modifier.padding(it))
                 }
             }
         }
