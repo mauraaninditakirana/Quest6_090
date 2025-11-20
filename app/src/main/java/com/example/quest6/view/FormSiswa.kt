@@ -42,7 +42,7 @@ fun FormIsian(
     // onSubmitButtonClicked: (MutableList<String>) -> Unit,
     // modifier: Modifier = Modifier
     //jenisK: List<String> = listOf("Laki-laki","Perempuan"),
-    OnSubmitBtnClick: (MutableList<String>) -> Unit,
+    onSubmitButtontnClicked: (MutableList<String>) -> Unit,
 ){
     var txtNama by rememberSaveable { mutableStateOf("") }
     var txtAlamat by remember { mutableStateOf("") }
@@ -117,10 +117,11 @@ fun FormIsian(
                     txtAlamat = it
                 }
             )
-            Spacer(modifier = Modifier.height(30.dp))
+            Spacer(modifier = Modifier.height(20.dp))
             Button(
                 modifier = Modifier.fillMaxWidth(1f),
-                onClick = OnSubmitBtnClick
+                enabled = txtAlamat.isNotEmpty(),
+                onClick = {onSubmitButtontnClicked(listData)}
             ){
                 Text(stringResource(id = R.string.submit))
             }
