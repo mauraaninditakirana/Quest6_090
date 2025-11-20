@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.dp
 import com.example.quest6.R
 
 @Composable
-fun FormIsian(
+fun FormSiswa(
     pilihanJK: List<String>,
     // onSubmitButtonClicked: (MutableList<String>) -> Unit,
     // modifier: Modifier = Modifier
