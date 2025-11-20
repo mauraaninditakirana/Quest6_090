@@ -13,16 +13,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.quest6.ui.theme.Quest6Theme
+import com.example.quest6.view.uicontroller.SiswaApp
 
 class MainActivity : ComponentActivity() {
-    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             Quest6Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) {
-
+               Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                   SiswaApp(
+                       modifier = Modifier.padding(innerPadding))
                 }
             }
         }
