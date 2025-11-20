@@ -13,6 +13,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -98,10 +99,14 @@ fun FormIsian(
             OutlinedTextField(
                 value = "",
                 singleLine = true,
+                shape = MaterialTheme.shapes.medium,
                 modifier = Modifier
-                    .width(250.dp),
-                label = { Text(text = "Alamat")},
-                onValueChange = {}
+                    .width(250.dp)
+                    .padding(top=20.dp),
+                label = { Text(text = "Nama Lengkap")},
+                onValueChange = {
+                    txtNama = it
+                }
             )
             Spacer(modifier = Modifier.height(30.dp))
             Button(
